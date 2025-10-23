@@ -17,3 +17,10 @@ def preenche_frota(dic_frota, navio, linha, coluna, orientacao, tamanho):
     else:
         dic[navio] = [pos]
     return dic
+
+def faz_jogada(tabuleiro, linha, coluna):
+    if tabuleiro[linha][coluna] == 1:
+        tabuleiro[linha][coluna] = 'X'
+    else:
+        tabuleiro[linha][coluna] = '-'
+    return tabuleiro
