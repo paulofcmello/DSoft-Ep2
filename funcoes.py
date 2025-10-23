@@ -44,3 +44,12 @@ def posiciona_frota(frota):
             for cordenada in navios:
                 tabuleiro[cordenada[0]][cordenada[1]] = 1
     return tabuleiro
+
+
+def afundados(dic, tabuleiro):
+    soma = 0
+    for navios in dic.values:
+        for posicoes in tabuleiro:
+            if posicoes == "X":
+                soma +=1
+    return soma
