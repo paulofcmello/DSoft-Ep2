@@ -50,6 +50,6 @@ def afundados(dic, tabuleiro):
     soma = 0
     for navios in dic.values:
         for posicoes in tabuleiro:
-            if posicoes == "X":
+            if posicoes == "X" and "X" not in tabuleiro[posicoes]:
                 soma +=1
     return soma
