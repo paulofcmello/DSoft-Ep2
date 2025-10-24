@@ -71,3 +71,7 @@ def posicao_valida(frota, linha, coluna, orientacao, tamanho):
                 if posicao in navio:
                     return False
     return True
+
+linha = input("Qual linha está?")
+coluna = input("Qual coluna está?")
+orientação = int(input("Qual direção está? (Digite 1 para vertocal e 2 para horizontal)"))
