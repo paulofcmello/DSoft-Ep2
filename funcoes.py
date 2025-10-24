@@ -47,9 +47,16 @@ def posiciona_frota(frota):
 
 
 def afundados(dic, tabuleiro):
-    soma = 0
-    for navios in dic.values:
-        for posicoes in tabuleiro:
-            if posicoes == "X" and "X" not in tabuleiro[posicoes]:
-                soma +=1
-    return soma
+    afundados = 0
+    for tipo in dic.values():
+        for navio in tipo:
+            soma = 0
+            qtd = 0
+            for posicao in navio:
+                if tabuleiro[posicao[0]][posicao[1]] == 'X':
+                    soma += 1
+                qtd += 1
+            if soma == qtd:
+                afundados += 1
+                
+    return afundados
