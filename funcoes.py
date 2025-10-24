@@ -60,3 +60,14 @@ def afundados(dic, tabuleiro):
                 afundados += 1
                 
     return afundados
+
+def posicao_valida(frota, linha, coluna, orientacao, tamanho):
+    posicoes = define_posicoes(linha, coluna, orientacao, tamanho)
+    for posicao in posicoes:
+        if posicao[0] > 9 or posicao[1] > 9:
+            return False
+        for posicoes in frota.values():
+            for navio in posicoes:
+                if posicao in navio:
+                    return False
+    return True
